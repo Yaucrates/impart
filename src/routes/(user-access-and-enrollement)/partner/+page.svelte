@@ -1,1 +1,0 @@
-Parter with Us Page
