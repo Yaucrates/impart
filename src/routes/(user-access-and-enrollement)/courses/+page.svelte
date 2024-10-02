@@ -10,12 +10,12 @@
     </div>
     <div class="w-fit gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <CourseBanner title="Single Variable Calculus"/>
+        <CourseBanner title="Linear Algebra"/>
+        <CourseBanner title="Introduction to Probability"/>
         <CourseBanner title="Multivariable Calculus"/>
         <CourseBanner title="Differential Equations"/>
-        <CourseBanner title="Linear Algebra"/>
         <CourseBanner title="Abstract Algebra"/>
         <CourseBanner title="Real Analysis"/>
         <CourseBanner title="Complex Analysis"/>
-        <CourseBanner title="Introduction to Probability"/>
     </div>
 </div>
