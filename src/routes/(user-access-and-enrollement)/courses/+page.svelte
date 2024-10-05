@@ -9,13 +9,13 @@
         <div class="h-1 my-8 w-32 rounded-full bg-gradient-to-r from-neutral-700 to-neutral-500"></div>
     </div>
     <div class="w-fit gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <CourseBanner title="Single Variable Calculus"/>
-        <CourseBanner title="Linear Algebra"/>
-        <CourseBanner title="Introduction to Probability"/>
-        <CourseBanner title="Multivariable Calculus"/>
-        <CourseBanner title="Differential Equations"/>
-        <CourseBanner title="Abstract Algebra"/>
-        <CourseBanner title="Real Analysis"/>
-        <CourseBanner title="Complex Analysis"/>
+        <CourseBanner disable title="Single Variable Calculus" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Linear Algebra" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Introduction to Probability" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Multivariable Calculus" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Differential Equations" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Abstract Algebra" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Real Analysis" instructor="Yousif Abdulhussein"/>
+        <CourseBanner disable title="Complex Analysis" instructor="Yousif Abdulhussein"/>
     </div>
 </div>
