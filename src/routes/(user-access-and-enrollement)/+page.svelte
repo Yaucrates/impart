@@ -20,6 +20,6 @@
             intuitive learning. Achieve more in less time.
         </p>
     </div>
-    <img src="axolotl.svg" alt="mascot" width="500"/>
+    <img src="axolotl.svg" alt="mascot" class="z-10" width="500"/>
 </div>
 <BackgroundBeams />
