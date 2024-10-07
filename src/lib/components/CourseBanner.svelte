@@ -27,9 +27,9 @@
     aria-expanded={expanded} 
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class={`${disable ? "cursor-default" : "cursor-pointer"} w-4/5 xs:w-[312px] min-h-48 xs:h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-[#252930] shadow-input transition duration-200`}
+    class={`${disable ? "cursor-default" : "cursor-pointer"} w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-[#252930] shadow-input transition duration-200`}
 >
-    <div class="bg-[#1d1e23] h-1/2 hidden xs:flex items-center justify-center">
+    <div class="bg-[#1d1e23] h-1/2 flex items-center justify-center">
         No Image Currently
     </div>
     <div class="p-5 h-1/2 transition duration-200 flex flex-col gap-3">
@@ -54,7 +54,7 @@
         tabindex="0"
         onclick={(e) => e.stopPropagation()}
         onkeydown={() => {}} 
-        class={`p-6 w-full min-[384px]:w-[28rem] h-full gap-4 flex flex-col fixed top-0 right-0 bg-impart-background overflow-y-auto transform transition-transform duration-500 cursor-auto ${expanded ? 'translate-x-0' : 'translate-x-full'}`}
+        class={`p-6 w-full min-[448px]:w-[28rem] h-full gap-4 flex flex-col fixed top-0 right-0 bg-impart-background overflow-y-auto transform transition-transform duration-500 cursor-auto ${expanded ? 'translate-x-0' : 'translate-x-full'}`}
     >
         <div class="w-full flex justify-end">
             <button onclick={toggle}><X /></button>
