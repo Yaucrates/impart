@@ -13,6 +13,9 @@ export default {
             impart: {
                 background: "rgb(26, 27, 31)",
             }
+        },
+        screens: {
+            'xs': '400px',
         }
     }
   },

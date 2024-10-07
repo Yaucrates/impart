@@ -1,4 +1,4 @@
-<header class="w-full px-20 py-12 h-20 flex justify-center items-center">
+<header class="w-full px-8 xs:px-20 py-12 h-20 flex justify-center items-center">
     <div class="w-full max-w-screen-lg flex justify-between">
         <ul class="gap-12 flex justify-center items-center">
             <li><a href="/" class="text-xl font-medium">Impart</a></li>

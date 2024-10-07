@@ -27,9 +27,9 @@
     aria-expanded={expanded} 
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class={`${disable ? "cursor-default" : "cursor-pointer"} w-[312px] h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-[#252930] shadow-input transition duration-200`}
+    class={`${disable ? "cursor-default" : "cursor-pointer"} w-4/5 xs:w-[312px] min-h-48 xs:h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-[#252930] shadow-input transition duration-200`}
 >
-    <div class="bg-[#1d1e23] h-1/2 flex items-center justify-center">
+    <div class="bg-[#1d1e23] h-1/2 hidden xs:flex items-center justify-center">
         No Image Currently
     </div>
     <div class="p-5 h-1/2 transition duration-200 flex flex-col gap-3">

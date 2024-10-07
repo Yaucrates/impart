@@ -4,7 +4,7 @@
 
 <div class="w-full h-full gap-8 flex flex-col lg:flex-row items-center justify-center">
     <div class="p-4 sm:p-0 flex flex-col justify-around items-center text-center">
-        <h1 class="text-6xl font-light">
+        <h1 class="text-4xl sm:text-6xl font-light">
             Ignite Curious
             <br />
             Minds with
@@ -12,7 +12,7 @@
                 Impart
             </span>
         </h1>
-        <p class="max-w-lg mt-8 text-base lg:text-lg font-light">
+        <p class="max-w-lg mt-8 sm:text-base lg:text-lg font-light">
             <span class="font-medium">
                 Effortless Understanding, Zero Memorization.
             </span>
