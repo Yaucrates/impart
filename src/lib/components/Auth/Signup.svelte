@@ -3,8 +3,6 @@
     import { getUser } from "$lib/pocketbase/user.svelte";
     import { signup } from "./auth";
 
-    const user = getUser();
-
     let username = $state("");
     let email = $state("");
     let password = $state("");
@@ -12,7 +10,11 @@
 
     const handleClick = async () => {
         await signup(username, email, password).then(() => {
-            goto("/");
+            const user = getUser();
+
+            if (user.user) {
+                goto("/");
+            }
         }).catch(() => {
             error = true;
         });

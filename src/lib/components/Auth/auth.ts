@@ -14,11 +14,10 @@ export async function signup(username: string, email:string, password: string) {
             email,
             password,
             passwordConfirm: password,
-            name: "Mustafa Abdulhussein"
         }
 
         await pb.collection('users').create(data);
-        await login(data.username, data.password);
+        await login(data.email, data.password);
     } catch (err) {
         // handle error
     }
