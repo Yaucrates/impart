@@ -32,7 +32,7 @@
         </div>
         <div class="w-full gap-8 mt-32 flex flex-col justify-center items-center">
             <a href="/courses" class="font-light hover:text-neutral-300 text-xl transition-all duration-300">Courses</a>
-            <a href="/register" class="block font-light hover:text-neutral-300 text-xl transition-all duration-300">Log In</a>
+            <a href="/signup" class="block font-light hover:text-neutral-300 text-xl transition-all duration-300">Sign Up</a>
             <div class="w-44 h-12 flex justify-center items-center bg-blurple-800 hover:bg-blurple-900 text-lg transition-all duration-300 font-semibold rounded-md cursor-not-allowed">
                 Partner with Us
             </div>
