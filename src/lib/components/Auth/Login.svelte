@@ -8,7 +8,7 @@
 
     const handleClick = async () => {
         await login(email, password).then(() => {
-            goto("/");
+            goto("/dashboard");
         }).catch(() => {
             error = true;
         })

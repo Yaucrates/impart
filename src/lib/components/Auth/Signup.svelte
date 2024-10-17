@@ -13,7 +13,7 @@
             const user = getUserState();
 
             if (user.user) {
-                goto("/");
+                goto("/dashboard");
             }
         }).catch(() => {
             error = true;

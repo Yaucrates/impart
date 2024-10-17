@@ -1,19 +1,23 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+    import { pb } from "$lib/pocketbase/pocketbase";
+    import { getUserState } from "$lib/pocketbase/user.svelte";
     import X from "./Logos/X.svelte";
 
-    let { disable = false,
+    let {
+        id,
+        disable,
         title,
         instructor,
         prerequisites,
-        bannerDescription = "This is a planned course for the future",
-        modalDescription 
+        description,
     }: { 
-        disable?: Boolean, 
-        instructor: string,
+        id: string,
+        disable: Boolean, 
         title: string, 
-        prerequisites?: string,
-        bannerDescription?: string,
-        modalDescription?: string
+        instructor: string,
+        prerequisites: string,
+        description: string,
     } = $props();
 
     let expanded = $state(false);
@@ -23,6 +27,29 @@
     };
 
     const enroll = async () => {
+        if (disable) {
+            return;
+        }
+
+        const user = getUserState();
+
+        if (!user.user) {
+            goto("/signup")
+            return;
+        }
+
+        const course_data = await pb.collection('user_course_data').getFullList({
+            filter: `course_id = "${id}"`
+        });
+
+        if (course_data.length === 0) {
+            await pb.collection('user_course_data').create({
+                user_id: user.user?.id,
+                course_id: id
+            })
+        }
+
+        goto("/dashboard");
     }
 </script>
 
@@ -42,7 +69,7 @@
             {title}
         </div>
         <div class="text-xs font-normal text-neutral-600 dark:text-neutral-300">
-            {bannerDescription}
+            {description === "" ? "This is a planned course for the future" : description}
         </div>
     </div>
 </div>
@@ -71,16 +98,15 @@
             <button onclick={enroll} class={`w-44 h-12 my-6 hidden md:flex justify-center items-center bg-blurple-800 hover:bg-blurple-900 transition-all duration-300 font-semibold rounded-md ${disable ? "cursor-not-allowed" : ""}`}>
                 Enroll
             </button>
+            {#if prerequisites}
+                <p class="font-light text-sm text-neutral-400">Prerequisites: {prerequisites}</p>
+            {/if}
         </div>
         <hr class="border-neutral-700 w-full"/>
         <div class="gap-4 flex flex-col">
             <h2 class="font-medium text-xl text-white">About the Course</h2>
-            <p class="font-base text-sm text-neutral-400">
-                {modalDescription ?? bannerDescription}
-            </p>
-            {#if prerequisites}
-                <p class="font-light text-sm text-neutral-400">Prerequisites: {prerequisites}</p>
-            {/if}
+            
+            <p class="font-light text-sm text-neutral-400">{description === "" ? "This is a planned course for the future" : description}</p>
         </div>
     </div>
 </div>
