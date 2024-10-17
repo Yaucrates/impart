@@ -1,9 +1,9 @@
-import { getUser } from '$lib/pocketbase/user.svelte';
+import { getUserState } from '$lib/pocketbase/user.svelte';
 import { redirect } from '@sveltejs/kit';
 import type { LayoutLoad } from './$types';
 
 export const load = (async () => {
-    const user = await getUser();
+    const user = await getUserState();
 
     // If the user exists, redirect to another page (e.g., dashboard)
 

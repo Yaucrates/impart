@@ -1,6 +1,6 @@
 import { pb } from "./pocketbase"
 
-export function getUser() {
+export function getUserState() {
     let user = $state(pb.authStore.model);
 
     pb.authStore.onChange((auth) => {

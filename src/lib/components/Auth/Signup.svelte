@@ -1,6 +1,6 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
-    import { getUser } from "$lib/pocketbase/user.svelte";
+    import { getUserState } from "$lib/pocketbase/user.svelte";
     import { signup } from "./auth";
 
     let username = $state("");
@@ -10,7 +10,7 @@
 
     const handleClick = async () => {
         await signup(username, email, password).then(() => {
-            const user = getUser();
+            const user = getUserState();
 
             if (user.user) {
                 goto("/");

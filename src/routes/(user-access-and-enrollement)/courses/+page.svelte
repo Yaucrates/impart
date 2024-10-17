@@ -9,12 +9,12 @@
         <div class="h-1 my-8 w-32 rounded-full bg-gradient-to-r from-neutral-700 to-neutral-500"></div>
     </div>
     <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+        <CourseBanner title="A Tour of Neural Networks" prerequisites="Multivariable Calculus, Linear Algebra" bannerDescription="In this course, you'll go over the basics of Neural Networks." instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Single Variable Calculus" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Linear Algebra" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Introduction to Probability" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Multivariable Calculus" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Differential Equations" instructor="Yousif Abdulhussein"/>
-        <CourseBanner disable title="Abstract Algebra" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Real Analysis" instructor="Yousif Abdulhussein"/>
         <CourseBanner disable title="Complex Analysis" instructor="Yousif Abdulhussein"/>
     </div>    

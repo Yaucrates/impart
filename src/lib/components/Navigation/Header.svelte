@@ -1,9 +1,9 @@
 <script>
-    import { getUser } from "$lib/pocketbase/user.svelte";
+    import { getUserState } from "$lib/pocketbase/user.svelte";
     import Signout from "../Auth/Signout.svelte";
     import MobileNav from "./MobileNav.svelte";
 
-    const user = getUser();
+    const user = getUserState();
 </script>
 <header class="w-full px-8 xs:px-20 py-12 h-20 flex justify-center items-center">
     <div class="w-full max-w-screen-lg flex justify-between">

@@ -1,7 +1,7 @@
-import { getUser } from "$lib/pocketbase/user.svelte";
 import { pb } from "$lib/pocketbase/pocketbase";
+import { getUserState } from "$lib/pocketbase/user.svelte";
 
-const user = getUser();
+const user = getUserState();
 
 export async function login(email: string, password: string) {
     await pb.collection('users').authWithPassword(email, password);

@@ -4,12 +4,14 @@
     let { disable = false,
         title,
         instructor,
+        prerequisites,
         bannerDescription = "This is a planned course for the future",
         modalDescription 
     }: { 
         disable?: Boolean, 
         instructor: string,
         title: string, 
+        prerequisites?: string,
         bannerDescription?: string,
         modalDescription?: string
     } = $props();
@@ -19,6 +21,9 @@
     const toggle = () => {
         expanded = !expanded;
     };
+
+    const enroll = async () => {
+    }
 </script>
 
 <div 
@@ -27,7 +32,7 @@
     aria-expanded={expanded} 
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class={`${disable ? "cursor-default" : "cursor-pointer"} w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-magnificent-700 shadow-input transition duration-200`}
+    class="w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-magnificent-700 shadow-input transition duration-200"
 >
     <div class="bg-magnificent-800 h-1/2 flex items-center justify-center">
         No Image Currently
@@ -63,16 +68,19 @@
         <div class="w-full mt-6">
             <h1 class="font-light text-3xl mb-2">{title}</h1>
             <p class="font-light text-sm text-neutral-300">with {instructor}</p>
-            <div class={`w-44 h-12 my-6 hidden md:flex justify-center items-center bg-blurple-800 hover:bg-blurple-900 transition-all duration-300 font-semibold rounded-md ${disable ? "cursor-not-allowed" : ""}`}>
+            <button onclick={enroll} class={`w-44 h-12 my-6 hidden md:flex justify-center items-center bg-blurple-800 hover:bg-blurple-900 transition-all duration-300 font-semibold rounded-md ${disable ? "cursor-not-allowed" : ""}`}>
                 Enroll
-            </div>
+            </button>
         </div>
         <hr class="border-neutral-700 w-full"/>
-        <div class="gap-2 flex flex-col">
+        <div class="gap-4 flex flex-col">
             <h2 class="font-medium text-xl text-white">About the Course</h2>
             <p class="font-base text-sm text-neutral-400">
                 {modalDescription ?? bannerDescription}
             </p>
+            {#if prerequisites}
+                <p class="font-light text-sm text-neutral-400">Prerequisites: {prerequisites}</p>
+            {/if}
         </div>
     </div>
 </div>
