@@ -1,6 +1,6 @@
 <script lang="ts">
-    import X from "$lib/components/Logos/X.svelte";
-    import Menu from "$lib/components/Logos/Menu.svelte";
+    import X from "$lib/components/logos/X.svelte";
+    import Menu from "$lib/components/logos/Menu.svelte";
 
     let expanded = $state(false);
 
