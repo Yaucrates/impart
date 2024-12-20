@@ -4,5 +4,6 @@
 @import '@fontsource-variable/inter';
 
 :root, html, body {
+    background-color: rgb(26, 27, 31);
     font-family: 'Inter Variable', sans-serif;
 }
