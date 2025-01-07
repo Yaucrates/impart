@@ -5,10 +5,14 @@
         {
             id: 1,
             disable: true,
-            title: "None",
-            instructor: "Teacher",
-            prerequisites: "PreReqs",
-            description: "description",
+            image: {
+                src: "/CalculusCourseLogo.webp",
+                alt: "Calculus Course",
+            },
+            title: "Single Variable Calculus",
+            instructor: "Yousif Abdulhussein",
+            prerequisites: "Algebra and Trigonometry",
+            description: "This calculus course covers differentiation and integration of functions of one variable, and concludes with a brief discussion of infinite series.",
         }
     ]
 </script>
@@ -24,6 +28,7 @@
             <CourseBanner
                 disable={course.disable}
                 title={course.title}
+                image={course.image}
                 instructor={course.instructor}
                 prerequisites={course.prerequisites}
                 description={course.description}

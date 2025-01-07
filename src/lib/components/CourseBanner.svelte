@@ -3,12 +3,17 @@
 
     let {
         disable,
+        image,
         title,
         instructor,
         prerequisites,
         description,
     }: { 
-        disable: Boolean, 
+        disable: Boolean,
+        image?: {
+            src?: string,
+            alt?: string,
+        },
         title: string, 
         instructor: string,
         prerequisites: string,
@@ -34,9 +39,13 @@
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
     class="w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-impart-700 shadow-input transition duration-200"
 >
-    <div class="text-white bg-impart-800 h-1/2 flex items-center justify-center">
-        No Image Currently
-    </div>
+    {#if image}
+        <img src={image.src} alt={image.alt} />
+    {:else}
+        <div class="text-white bg-impart-800 h-1/2 flex items-center justify-center">
+            No Image Currently
+        </div>
+    {/if}
     <div class="p-5 h-1/2 transition duration-200 flex flex-col gap-3">
         <div class="text-lg uppercase font-bold text-neutral-600 dark:text-neutral-200">
             {title}
@@ -64,7 +73,7 @@
         <div class="w-full flex justify-end">
             <button onclick={toggle}><X stroke="white" /></button>
         </div>
-        <img src="coursePlaceholderImage.jpg" alt="Course Banner Placeholder" class="rounded-xl"/>
+        <img src={image ? image.src : "coursePlaceholderImage.jpg"} alt={image ? image.alt : "Course Banner Placeholder"} class="rounded-xl"/>
         <div class="w-full mt-6">
             <h1 class="font-light text-white text-3xl mb-2">{title}</h1>
             <p class="font-light text-sm text-neutral-300">with {instructor}</p>
