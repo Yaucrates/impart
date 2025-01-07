@@ -12,7 +12,23 @@
             title: "Single Variable Calculus",
             instructor: "Yousif Abdulhussein",
             prerequisites: "Algebra and Trigonometry",
-            description: "This calculus course covers differentiation and integration of functions of one variable, and concludes with a brief discussion of infinite series.",
+            description: "This course covers differentiation and integration of functions of one variable, and concludes with a brief discussion of infinite series.",
+        },
+        {
+            id: 2,
+            disable: true,
+            title: "Linear Algebra",
+            instructor: "Yousif Abdulhussein",
+            prerequisites: "Algebra and Trigonometry",
+            description: "This course covers matrix theory and linear algebra, emphasizing topics useful in other disciplines.",
+        },
+        {
+            id: 3,
+            disable: true,
+            title: "Introduction to Probability",
+            instructor: "Yousif Abdulhussein",
+            prerequisites: "Single Variable Calculus",
+            description: "This course introduces the fundamental concepts of probability theory, including probability spaces, random variables, probability distributions, expectation, and variance."
         },
     ]
 </script>

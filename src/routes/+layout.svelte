@@ -6,6 +6,8 @@
 	let { children } = $props();
 </script>
 
-<Header />
-{@render children()}
+<div class="h-full min-h-screen flex flex-col">
+    <Header />
+    {@render children()}
+</div>
 <Footer />
