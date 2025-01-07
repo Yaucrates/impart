@@ -13,7 +13,7 @@
             instructor: "Yousif Abdulhussein",
             prerequisites: "Algebra and Trigonometry",
             description: "This calculus course covers differentiation and integration of functions of one variable, and concludes with a brief discussion of infinite series.",
-        }
+        },
     ]
 </script>
 

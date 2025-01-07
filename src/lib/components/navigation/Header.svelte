@@ -1,5 +1,5 @@
 <script>
-    import ImpartNameLogo from "$lib/logo/ImpartNameLogo.svelte";
+    import ImpartNameLogo from "$lib/components/logos/ImpartNameLogo.svelte";
     import MobileNav from "./MobileNav.svelte";
 </script>
 
