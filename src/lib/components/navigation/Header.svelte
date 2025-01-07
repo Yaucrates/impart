@@ -1,16 +1,18 @@
 <script>
     import ImpartNameLogo from "$lib/logo/ImpartNameLogo.svelte";
+    import MobileNav from "./MobileNav.svelte";
 </script>
 
 <header class="pt-6 p-10 flex justify-between items-center">
     <div class="gap-8 flex items-center">
         <a href="/"><ImpartNameLogo scale={0.15} /></a>
-        <a class="font-medium text-white" href="/">Home</a>
-        <a class="font-medium text-white" href="/courses">Courses</a>
-        <a class="font-medium text-white" href="/mission">Our Mission</a>
+        <a class="font-medium text-white hidden lg:block" href="/">Home</a>
+        <a class="font-medium text-white hidden lg:block" href="/courses">Courses</a>
+        <a class="font-medium text-white hidden lg:block" href="/mission">Our Mission</a>
     </div>
     <div class="gap-8 flex items-center">
-        <div class="font-medium text-white cursor-not-allowed">Log In</div>
-        <div class="px-4 py-2 font-medium rounded-full text-white cursor-not-allowed bg-blue-600 hover:bg-blue-700 transition-colors duration-300">Partner with Us</div>
+        <div class="font-medium text-white cursor-not-allowed hidden lg:block">Log In</div>
+        <div class="px-4 py-2 font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 cursor-not-allowed hidden lg:block">Partner with Us</div>
+        <div class="block lg:hidden text-white"><MobileNav /></div>
     </div>
 </header>
