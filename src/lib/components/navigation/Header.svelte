@@ -3,7 +3,7 @@
     import MobileNav from "./MobileNav.svelte";
 </script>
 
-<header class="pt-6 p-10 flex justify-between items-center">
+<header class="py-6 px-10 flex justify-between items-center">
     <div class="gap-8 flex items-center">
         <a href="/"><ImpartNameLogo scale={0.15} /></a>
         <a class="font-medium text-white hidden lg:block" href="/">Home</a>

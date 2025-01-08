@@ -33,7 +33,12 @@
     ]
 </script>
 
-<div class="p-8 w-full flex flex-col items-center justify-center">
+<svelte:head>
+	<title>Impart | Courses</title>
+	<meta name="description" content="These are all the courses that Impart has to offer." />
+</svelte:head>
+
+<div class="p-10 w-full flex flex-col items-center justify-center">
     <div class="p-14 gap-4 w-full flex flex-col justify-center items-center">
         <h1 class="font-black text-white text-3xl sm:text-5xl">COURSES</h1>
         <p class="text-neutral-400 text-center">Challenging Courses with Projects, Quizzes, and Progress-Tracking</p>
