@@ -75,11 +75,11 @@
             <h1 class="font-light text-white text-3xl mb-2">{title}</h1>
             <p class="font-light text-sm text-neutral-300">with {instructor}</p>
             {#if disable}
-                <div class="w-44 h-12 my-6 hidden md:flex justify-center items-center text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 font-semibold rounded-md cursor-not-allowed">
+                <div class="w-44 h-12 my-6 flex justify-center items-center text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 font-semibold rounded-md cursor-not-allowed">
                     Enroll
                 </div>
             {:else}
-                <a href="/courses/{toKebabCase(title)}" class="w-44 h-12 my-6 hidden md:flex justify-center items-center text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 font-semibold rounded-md">
+                <a href="/courses/{toKebabCase(title)}" class="w-44 h-12 my-6 flex justify-center items-center text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 font-semibold rounded-md">
                     Enroll
                 </a>
             {/if}

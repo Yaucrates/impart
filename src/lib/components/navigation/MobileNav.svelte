@@ -18,7 +18,7 @@
     tabindex="0"
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class="fixed top-0 left-0 w-full h-full transition-colors duration-300 cursor-default z-50 {expanded ? 'bg-black/40' : 'bg-transparent pointer-events-none'}"
+    class="fixed top-0 left-0 w-full h-full transition-colors duration-300 cursor-default z-[60] {expanded ? 'bg-black/40' : 'bg-transparent pointer-events-none'}"
 >
     <div
         role="button" 
