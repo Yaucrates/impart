@@ -4,7 +4,7 @@
     let courses = [
         {
             id: 1,
-            disable: true,
+            disable: false,
             image: {
                 src: "/CalculusCourseLogo.webp",
                 alt: "Calculus Course",
