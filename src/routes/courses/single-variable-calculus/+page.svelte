@@ -4,4 +4,7 @@
     let { data }: { data: PageData } = $props();
 </script>
 
-Single Variable Calculus
+
+<div class="h-firstPage text-white">
+    Single Variable Calculus
+</div>

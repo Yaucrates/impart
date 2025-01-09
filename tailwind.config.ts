@@ -6,6 +6,9 @@ export default {
 
   theme: {
     extend: {
+        height: {
+            firstPage: "calc(100vh - 89px)",
+        },
         colors: {
             impart: {
                 700: "rgb(37, 41, 48)",
