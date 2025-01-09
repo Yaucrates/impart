@@ -6,7 +6,7 @@
 	<meta name="description" content="Impart is the best way of learning. All your classes are in one place accessible at anytime anywhere." />
 </svelte:head>
 
-<div class="px-8 sm:px-20 md:py-40 h-screen md:h-full flex justify-around items-center">
+<div class="px-8 sm:px-20 md:py-40 h-screen lg:h-full flex justify-around items-center">
     <div class="gap-8 w-full lg:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <h1 class="w-full md:w-4/5 lg:w-full text-5xl lg:text-6xl text-white font-black">
             Meet the Ultimate Virtual School

@@ -1,34 +1,39 @@
 <script lang="ts">
     import X from "$lib/components/logos/X.svelte";
-    import Menu from "$lib/components/logos/Menu.svelte";
-
-    let expanded = $state(false);
+    import { mobileNavState } from "./MobileNavState.svelte";
 
     const toggle = () => {
-        expanded = !expanded;
-    };
-</script>
+        mobileNavState.expanded = !mobileNavState.expanded;
 
-<button onclick={toggle} aria-label="menu">
-    <Menu />
-</button>
+        if (mobileNavState.expanded) {
+            // Scroll to the top of the page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Disable scrolling
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Enable scrolling
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
 
 <div 
     role="button" 
     tabindex="0"
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class="fixed top-0 left-0 w-full h-full transition-colors duration-300 cursor-default z-[60] {expanded ? 'bg-black/40' : 'bg-transparent pointer-events-none'}"
+    class="fixed top-0 right-0 w-full h-full transition-colors duration-300 cursor-default z-[60] {mobileNavState.expanded ? 'bg-black/40' : 'bg-transparent pointer-events-none'}"
 >
     <div
         role="button" 
         tabindex="0"
         onclick={(e) => e.stopPropagation()}
         onkeydown={() => {}} 
-        class="px-10 py-6 w-full min-[320px]:w-80 h-full gap-4 flex flex-col fixed top-0 right-0 bg-impart-background overflow-y-auto transform transition-transform duration-500 cursor-auto {expanded ? 'translate-x-0' : 'translate-x-full'}"
+        class="px-10 py-6 w-full min-[320px]:w-80 h-full gap-4 flex flex-col fixed top-0 right-0 bg-impart-background overflow-y-auto transform transition-transform duration-500 cursor-auto {mobileNavState.expanded ? 'translate-x-0' : 'translate-x-full'}"
     >
         <div class="w-full flex justify-end">
-            <button onclick={toggle}><X /></button>
+            <button onclick={toggle} class="text-white"><X /></button>
         </div>
         <div class="w-full gap-8 flex flex-col justify-center">
             <a class="text-white" href="/">Home</a>
