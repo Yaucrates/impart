@@ -35,7 +35,7 @@
 
 <svelte:head>
 	<title>Impart | Courses</title>
-	<meta name="description" content="These are all the courses that Impart has to offer." />
+	<meta name="description" content="Browse our course library." />
 </svelte:head>
 
 <div class="p-10 w-full flex flex-col items-center justify-center">
