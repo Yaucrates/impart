@@ -4,6 +4,11 @@
 <svelte:head>
 	<title>Impart | Online Asynchronous Higher Education</title>
 	<meta name="description" content="Impart is the best way of learning. All your classes are in one place accessible at anytime anywhere." />
+
+    <meta property="og:title" content="Impart | Online Asynchronous Higher Education" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/ogImage.png" />
+    <meta property="og:url" content="https://www.imparteducation.com/" />
 </svelte:head>
 
 <div class="px-8 sm:px-20 md:py-40 h-firstPage flex justify-around items-center">
