@@ -27,7 +27,7 @@
         <a class="font-medium text-white hidden lg:block" href="/mission">Our Mission</a>
     </div>
     <div class="gap-8 flex items-center">
-        <div class="font-medium text-white cursor-not-allowed hidden lg:block">Log In</div>
+        <a class="font-medium text-white hidden lg:block" href="/login">Log In</a>
         <div class="px-4 py-2 font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 cursor-not-allowed hidden lg:block">Partner with Us</div>
         <button onclick={toggle} class="block lg:hidden text-white py-2" aria-label="menu">
             <Menu />

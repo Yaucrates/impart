@@ -9,7 +9,7 @@
         <a class="text-sm text-neutral-300" href="/">Home</a>
         <a class="text-sm text-neutral-300" href="/courses">Courses</a>
         <a class="text-sm text-neutral-300" href="/mission">Our Mission</a>
-        <div class="text-sm text-neutral-300 cursor-not-allowed">Log In</div>
+        <a class="text-sm text-neutral-300" href="/login">Log In</a>
         <div class="w-fit px-4 py-2 text-sm rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 cursor-not-allowed">Partner with Us</div>
     </div>
     <p class="text-neutral-300 text-sm text-center">Copyright © 2025 - All rights reserved</p>
