@@ -39,7 +39,7 @@
             <a class="text-white" href="/">Home</a>
             <a class="text-white" href="/courses">Courses</a>
             <a class="text-white" href="/mission">Our Mission</a>
-            <div class="text-white cursor-not-allowed">Log In</div>
+            <a class="text-white cursor-not-allowed" href="/login">Log In</a>
             <div class="w-fit px-4 py-2 rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 cursor-not-allowed">Partner with Us</div>
         </div>
     </div>
