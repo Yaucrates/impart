@@ -9,10 +9,10 @@
 </script>
 
 <div class="h-firstPage flex">
-    <div class="p-6 w-80 border-r flex flex-col border-neutral-700 overflow-y-scroll">
+    <div class="p-6 w-80 border-r gap-2 flex flex-col border-neutral-700 overflow-y-scroll">
         <div class="flex justify-end"><Minimize /></div>
         <div class="flex flex-col">
-            <a href="/courses/single-variable-calculus" class="pr-4 gap-3 border-b flex hover:bg-blue-500/30 border-neutral-700">
+            <a href="/courses/single-variable-calculus" class="pr-4 gap-3 border-b flex {slug === "/courses/single-variable-calculus" ? "bg-blue-500/10 hover:bg-blue-500/20" : "hover:bg-impart-700"} border-neutral-700">
                 <div class="h-full w-1 {slug === "/courses/single-variable-calculus" && "bg-blue-500"}"></div>
                 <div class="py-4 flex flex-col">
                     <h1 class="text-neutral-100 text-lg font-semibold">Single Variable Calculus</h1>
@@ -20,7 +20,7 @@
                 </div>
             </a>
             {#each {length: 10} as _, i}
-                <a href="/courses/single-variable-calculus/{i}" class="pr-4 gap-3 border-b flex hover:bg-blue-500/30 border-neutral-700">
+                <a href="/courses/single-variable-calculus/{i}" class="pr-4 gap-3 border-b flex {slug === `/courses/single-variable-calculus/${i}` ? "bg-blue-500/10 hover:bg-blue-500/20" : "hover:bg-impart-700"} border-neutral-700">
                     <div class="h-full w-1 {slug === `/courses/single-variable-calculus/${i}` && "bg-blue-500"}"></div>
                     <div class="py-4 flex flex-col">
                         <h1 class="uppercase text-sm text-neutral-300 font-medium">Unit {i}</h1>
