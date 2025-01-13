@@ -45,7 +45,7 @@
     aria-expanded={expanded} 
     onclick={toggle} 
     onkeydown={(e) => e.key === 'Enter' && toggle()} 
-    class="w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-impart-700 shadow-input transition duration-200"
+    class="w-60 xs:w-80 h-96 row-span-1 overflow-hidden flex flex-col justify-between rounded-xl bg-impart-600 shadow-input transition duration-200"
 >
     {#if image}
         <img src={image.src} alt={image.alt} />

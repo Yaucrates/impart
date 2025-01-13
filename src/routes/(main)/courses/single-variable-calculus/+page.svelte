@@ -1,1 +1,1 @@
-<div class="text-white">Course Page</div>
+<div class="text-white">Calculus</div>
