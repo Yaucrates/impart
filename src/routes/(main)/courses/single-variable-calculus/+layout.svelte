@@ -1,16 +1,12 @@
 <script lang="ts">
-    import { page } from '$app/state';
+    import type { Snippet } from 'svelte';
     import ChevronRight from '$lib/components/logos/ChevronRight.svelte';
     import Minimize from '$lib/components/logos/Minimize.svelte';
-    import { toKebabCase } from '$lib/helpers/toKebabCase';
-    import type { Snippet } from 'svelte';
 
     let { children }: { children: Snippet } = $props();
 
     let chapterNumber = $state(0);
     let toggleDropdown = $state(false);
-
-    const slug = $derived(page.url.pathname.replace('/(main)', ''));
 
     const chapters = [
         {
@@ -54,24 +50,13 @@
             </button>
             <div class="flex flex-col w-full bg-impart-600 overflow-y-scroll {toggleDropdown || "hidden"}">
                 {#each chapters as chapter, i}
-                    <button onclick={() => { chapterNumber = i; toggleDropdown = false; } } class="px-4 py-2 gap-4 flex text-start truncate text-neutral-100 bg-impart-600 hover:bg-impart-700 duration-300 transition-colors {i === chapterNumber && "hidden"}">
+                    <button onclick={() => { chapterNumber = i; toggleDropdown = false; } } class="px-4 py-2 gap-4 text-neutral-100 text-start truncate bg-impart-600 hover:bg-impart-700  duration-300 transition-colors {i === chapterNumber && "hidden"}">
                         Chapter {chapter.number}: {chapter.name}
                     </button>
                 {/each}
             </div>
         </div>
         <hr class="h-[1px] w-full bg-neutral-700 border-neutral-700"/>
-        <!-- <div class="flex flex-col">
-            {#each units as unit, i}
-                <a href="/courses/single-variable-calculus/{toKebabCase(unit)}" class="pr-4 gap-3 border-t flex {slug === `/courses/single-variable-calculus/${toKebabCase(unit)}` ? "bg-blue-500/10 hover:bg-blue-500/20" : "hover:bg-impart-600"} border-neutral-700">
-                    <div class="h-full w-1 {slug === `/courses/single-variable-calculus/${toKebabCase(unit)}` && "bg-blue-500"}"></div>
-                    <div class="py-4 flex flex-col">
-                        <h1 class="uppercase text-sm text-neutral-300 font-medium">Unit {i}</h1>
-                        <h2 class="text-neutral-100 font-medium">{unit}</h2>
-                    </div>
-                </a>
-            {/each}
-        </div> -->
     </div>
     {@render children()}
 </div>
